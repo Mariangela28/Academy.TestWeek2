@@ -40,7 +40,7 @@ namespace Academy.TestWeek2
                     Movements();
                     break;
                 case 3:
-                    StampaDati();
+                    StampaDati(numeroConto, nomeBanca, saldo, ultimaOperazione);
                     break;
                 default:
                     Console.WriteLine("Arrivederci");
@@ -53,9 +53,15 @@ namespace Academy.TestWeek2
 
         
 
-        private static void StampaDati()
+        private static void StampaDati(string numeroConto, string nomeBanca, double saldo, DateTime ultimaOperazione)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("*** Estratto conto ***");
+            Console.WriteLine("");
+            Console.WriteLine("Numero conto: {0}", numeroConto);
+            Console.WriteLine("Nome banca: {0}", nomeBanca);
+            Console.WriteLine("Saldo: {0} euro ", saldo);
+            Console.WriteLine("Data ultima operazione: ", ultimaOperazione);
+            Console.WriteLine("");
         }
 
         public void AddAccount(Account Account)
